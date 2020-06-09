@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<?xml-stylesheet type="text/css" href="css-html401.css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      >
+    <h:head>
+        <title>#{msg.title}</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="shortcut icon" href="images/favicon.png"/>
+        <link href='http://fonts.googleapis.com/css?family=Sniglet' rel='stylesheet' type='text/css'/>
+    </h:head>
+    <h:body>
+        <f:loadBundle basename="choice.util.labels" var="msg"/>  
+        <br/>    
+        <div id="container" class="container" style="position:relative;">
+            <div style="position: absolute;top: 0px;left:-20px;">
+                <img src="images/logo.png" align="absmiddle" border="0" title="logo" alt="logo"/>
+            </div>
+            <br/>
+            <br/>
+            <br/>           
+            <h:form title=" " id="nuevo">
+                <ice:outputLabel value="#{msg.editcarac}" style="font-size:2vw;color:#014A9D;"/>
+                <br/>
+                      <table border="0" cellspacing="10">
+                    <tr>
+                        <td align="right">
+                            <ice:outputLabel value="#{msg.detalle}"/>
+                        </td>
+                        <td align="left" colspan="5">
+                            <ice:inputText id="name" value="#{choiceManagedBean.nombreCaract}" label="name"
+                                           required="true" requiredMessage="Se necesita un valor." size="50" maxlength="50"/>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td>
+                            <ice:outputLabel value="#{msg.prioridad}"/>
+                        </td>
+                        <td align="center" valign="top">
+                            <ice:commandLink actionListener="#{choiceManagedBean.changeImportancia(0)}" immediate="true">
+                                <img src="#{choiceManagedBean.imageStarA}" align="absmiddle" border="0" title="star" alt="star" style="width:48px;height:48px;"/>
+                            </ice:commandLink>                               
+                        </td>
+                        <td align="center" valign="top">
+                            <ice:commandLink actionListener="#{choiceManagedBean.changeImportancia(1)}" immediate="true">
+                                <img src="#{choiceManagedBean.imageStarB}" align="absmiddle" border="0" title="star" alt="star" style="width:48px;height:48px;"/>
+                            </ice:commandLink>                               
+                        </td>
+                        <td align="center" valign="top">
+                            <ice:commandLink actionListener="#{choiceManagedBean.changeImportancia(2)}" immediate="true">
+                                <img src="#{choiceManagedBean.imageStarC}" align="absmiddle" border="0" title="star" alt="star" style="width:48px;height:48px;"/>                             
+                            </ice:commandLink>                            
+                        </td>
+                        <td align="center" valign="top">
+                            <ice:commandLink actionListener="#{choiceManagedBean.changeImportancia(3)}" immediate="true">
+                                <img src="#{choiceManagedBean.imageStarD}" align="absmiddle" border="0" title="star" alt="star" style="width:48px;height:48px;"/>
+                            </ice:commandLink>                             
+                        </td> 
+                        <td align="center" valign="top">
+                            <ice:commandLink actionListener="#{choiceManagedBean.changeImportancia(4)}" immediate="true">
+                                <img src="#{choiceManagedBean.imageStarE}" align="absmiddle" border="0" title="star" alt="star" style="width:48px;height:48px;"/>
+                            </ice:commandLink>                               
+                        </td>
+                    </tr>  
+                </table>
+                <br/>
+                <ice:commandButton value="#{msg.save}" action="#{choiceManagedBean.editCaracteristica()}" styleClass="boton" style="margin-right:10px;"/>
+                <ice:commandButton value="#{msg.cancel}" action="index" immediate="true" styleClass="boton"/>
+            </h:form>
+            <br/>
+            <br/>
+            <br/>
+        </div>  
+        <div id="footer" class="footer">
+            <ui:include src="footer.xhtml"/>
+        </div>
+    </h:body>
+</html>

@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<?xml-stylesheet type="text/css" href="css-html401.css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <title>#{msg.title}</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="shortcut icon" href="images/favicon.png"/>
+        <link href='http://fonts.googleapis.com/css?family=Sniglet' rel='stylesheet' type='text/css'/>
+    </h:head>
+    <h:body>
+        <f:loadBundle basename="choice.util.labels" var="msg"/>  
+        <br/>       
+        <div id="container" class="container" style="position:relative;">
+            <div style="position: absolute;top: 0px;left:-20px;">
+                <img src="images/logo.png" align="absmiddle" border="0" title="logo" alt="logo"/>
+            </div>         
+            <br/>
+            <br/>           
+            <h:form title=" " id="paso1">
+                <ice:outputLabel value="#{msg.paso1}" style="font-size:2vw;color:#014A9D;"/>            
+                <br/>
+                <br/>
+                <table border="0" cellspacing="5">
+                    <tr>
+                        <td align="right">
+                            <ice:outputLabel value="#{msg.name}" style="font-size:2.5rem;"/>
+                        </td>
+                        <td align="left">
+                            <ice:inputText id="name" value="#{choiceManagedBean.nombreModelo}" label="name"
+                                           required="true" requiredMessage="Se necesita un valor." 
+                                           size="30" maxlength="30" style="font-size:2.5rem;border: none;"/>
+                        </td>
+                        <td align="right">
+                            <ice:outputLabel value="#{msg.addcaract}"/>  
+                        </td>
+                        <td align="left">
+                            <ice:commandLink action="#{choiceManagedBean.prepararNuevoCaracteristica()}">
+                                <img src="images/add.png" align="absmiddle" border="0" title="add" alt="add"/>
+                            </ice:commandLink>                         
+                        </td>
+                    </tr>                   
+                </table>
+                <table border="0" cellspacing="25">
+                    <c:forEach items="#{choiceManagedBean.listCaracteristica}" var="item">
+                        <tr>
+                            <td align="right">
+                                <ice:outputLabel value="#{item.nombre}" style="font-size:2.5rem;"/>
+                            </td>
+                            <td align="left">
+                                <ice:outputLabel value="#{item.peso}" style="font-size:2.5rem;color:#adacad;">
+                                    <f:convertNumber type="number" maxFractionDigits="2" locale="es_AR"/>
+                                </ice:outputLabel>
+                            </td>
+                            <td align="center">
+                                <ice:commandLink action="editCaracteristica" actionListener="#{choiceManagedBean.prepararEditCaracteristica()}">
+                                    <f:param name="name" value="#{item.nombre}" />
+                                    <img src="images/edit.png" align="absmiddle" border="0" title="add" alt="add"/>
+                                </ice:commandLink>
+                            </td>
+                            <td align="center">
+                                <ice:commandLink action="#" actionListener="#{choiceManagedBean.borrarCaracteristica()}">
+                                    <f:param name="name" value="#{item.nombre}" />
+                                    <img src="images/delete.png" align="absmiddle" border="0" title="add" alt="add"/>
+                                </ice:commandLink>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </h:form>            
+            <br/>
+            <h:form title=" " id="paso2">
+                <ice:outputLabel value="#{msg.paso2}" style="font-size:2vw;color:#014A9D;"/>
+                <br/>
+                <br/>
+                <table border="0" cellspacing="5">
+                    <tr>                    
+                        <td align="right">
+                            <ice:outputLabel value="#{msg.addalt}"/>
+                        </td>
+                        <td align="left">
+                            <ice:commandLink action="#{choiceManagedBean.prepararNuevoAlternativa()}">
+                                <img src="images/add.png" align="absmiddle" border="0" title="add" alt="add"/>
+                            </ice:commandLink>
+                        </td>
+                    </tr>                    
+                </table>
+                <table border="0" cellspacing="25">
+                    <c:forEach items="#{choiceManagedBean.listAlternativa}" var="item">
+                        <tr>
+                            <td align="right">
+                                <ice:outputLabel value="#{item.nombre}" style="font-size:2.5rem;"/>
+                            </td>
+                            <td align="center">
+                                <ice:commandLink action="editAlternativa" actionListener="#{choiceManagedBean.prepararEditAlternativa()}">
+                                    <f:param name="name" value="#{item.nombre}" />
+                                    <img src="images/edit.png" align="absmiddle" border="0" title="add" alt="add"/>
+                                </ice:commandLink>
+                            </td>
+                            <td align="center">
+                                <ice:commandLink action="#" actionListener="#{choiceManagedBean.borrarAlternativa()}">
+                                    <f:param name="name" value="#{item.nombre}" />
+                                    <img src="images/delete.png" align="absmiddle" border="0" title="add" alt="add"/>
+                                </ice:commandLink>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </h:form>          
+            <br/>
+            <h:form title=" " id="paso3">
+                <h:inputHidden id="pol" value="#{choiceManagedBean.polaridad}" />
+                <ice:outputLabel value="#{msg.paso3}" style="font-size:2vw;color:#014A9D;"/>                  
+                <br/>
+                <br/>
+                <table border="0" cellspacing="10">
+                    <tr>
+                        <td>
+                            <img src="images/conj.png" align="absmiddle" border="0" title="conj" alt="conj"/>                            
+                        </td>
+                        <td>                              
+                            <input type="range" min="0" max="4" id="myRange" onchange="cambioPol()"/>
+                        </td>
+                        <td>
+                            <img src="images/disj.png" align="absmiddle" border="0" title="disj" alt="disj"/>                            
+                        </td>
+                        <td>
+                            <ice:panelGroup id="msgpolaridad" style="width: 80%;text-align:justify;margin:10px;">
+                                <ice:outputLabel value="#{msg.msgpolaridad}" style="font-size:0.875rem;color:#adacad;"/>  
+                            </ice:panelGroup>
+                        </td>
+                    </tr>                                    
+                </table>
+                <br/>             
+                <ice:commandButton value="#{msg.elegir}"  styleClass="boton" style="margin-right:10px;" actionListener="#{choiceManagedBean.calcular()}"/>
+                <ice:commandButton value="#{msg.limpiar}" styleClass="boton" actionListener="#{choiceManagedBean.limpiar()}"/>
+            </h:form>  
+            <h:form>
+                <ice:panelPopup id="panelPartida"
+                                visible="#{choiceManagedBean.opened}"
+                                rendered="#{choiceManagedBean.opened}"
+                                modal="true"
+                                autoCentre="true">
+                    <f:facet name="header">
+                        <h:panelGroup>
+                            <h:panelGroup style="float:left;">
+                                <ice:graphicImage url="images/symbolWarning.png" style="margin-right:10px;"/>
+                                Advertencia ...
+                            </h:panelGroup>
+                            <h:panelGroup style="float: right;">
+                                <h:commandButton image="images/symbolPopupClose.png"
+                                                 alt="Close" title="Close"
+                                                 style="height: 11px; width: 11px; border: 0;margin: 7px;"
+                                                 actionListener="#{choiceManagedBean.cerrarPopup}"
+                                                 immediate="true"/>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </f:facet>
+                    <f:facet name="body">
+                        <ice:outputText value="#{choiceManagedBean.mensajePopup}"/>
+                    </f:facet>
+                </ice:panelPopup>
+            </h:form>       
+            <br/>
+        </div>  
+        <div id="footer" class="footer">
+            <ui:include src="footer.xhtml"/>
+        </div>
+        <script>
+            function cambioPol() {
+                var x = document.getElementById("myRange").value;  
+                document.getElementById("paso3:pol").value = x;
+            }
+        </script>
+    </h:body>
+</html>

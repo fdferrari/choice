@@ -1,0 +1,1013 @@
+/* 
+    Document   : style
+    Created on : 14-sep-2011, 11:14:06
+    Author     : Federico Ferrari
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/*
+Letras comunes 1.1vw --- 13px
+Titulo sistema 2vw
+Titulo dos 1.5 vw
+footer 1.1vw  -- 13px
+*/
+
+body {
+    font-family: 'Sniglet';
+    font-size:1.1vw;
+    text-align: center;
+    color: #171E28;
+    background: #9D014A;
+}
+
+.footer {
+    font-size: 1.1vw;
+    text-align:right;   
+    margin-top: 5px;
+    background: transparent;
+    color:white;
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.container {   
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+    background: white;
+}
+
+
+.boton{
+    background-color: #014A9D;
+    background-image: linear-gradient(#014A9D, #014A9D);
+    border: 1px solid #9D014A;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    overflow: visible;
+    padding: 5px 25px;
+    width: auto;
+}
+
+
+
+/*
+------------------------------------------------------------------------------
+*/
+
+
+
+.content{
+    text-align : justify;
+    background: white;
+    border: solid 1px #0a7285;
+    height: 1000px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 15px;   
+}
+
+.top {
+    margin-top: 100px;
+    background: transparent
+}
+
+
+
+.banner{
+    background: transparent;
+    text-align: right;
+    font-size: 1.1vw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.tituloUno{
+    font-family: 'Sniglet'; 
+    font-size: 2vw;
+    color: #0a7285;
+}
+
+.tituloDos{
+    font-family: 'Sniglet'; 
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #E87A15;
+}
+
+.tituloTres{
+    font-family: 'Sniglet'; 
+    font-size: 1.1vw;  
+    color:#E5B19C;
+}
+
+.button{
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: #171E28;
+}
+
+.inputText{
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: #171E28;
+    border: 1px solid #0a7285;
+}
+
+.outputLabel{
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: #171E28;
+    border: solid 1px #0a7285;
+    padding-top: 2px;
+    padding-bottom:2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: auto;
+}
+
+.radio {
+    font-family:'Sniglet';
+    font-size: 1.1vw;
+    border:none;
+}
+
+.black{
+    font-weight:bold;
+}
+
+.red{
+    color:red;
+    font-weight:bold;
+}
+
+.login{
+    text-align : justify;
+    background: white;
+    border: solid 1px #0a7285;
+}
+
+.error{
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: red;
+}
+
+a:link { 
+    font: 1.1vw 'Sniglet'; 
+    text-decoration: none; 
+    color: #0a7285;
+    font-size: 1.1vw;
+}
+
+a:visited { 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #0a7285;
+    font-size: 1.1vw;
+}
+
+a:hover, a:active { 
+    text-decoration: none; 
+    color: #171E28; 
+    font-size: 1.1vw;
+}
+
+.menu {
+    height : 30px;
+    background-color:transparent;
+    width: 100%;
+}
+
+/*
+    Classes for the MenuBar
+*/
+.iceMnuBar {
+    font-size: 1.1vw;
+    padding : 0;
+    white-space : nowrap;
+}
+
+.iceMnuBarItem {
+    float : left;
+    padding : 0;
+    white-space : nowrap;
+}
+
+.iceMnuBarItem a {
+    background: #f7fbfc; /* Old browsers */
+    background: -moz-linear-gradient(top, #f7fbfc 0%, #d9edf2 60%, #add9e4 100%); /* FF3.6+ */
+    height : auto;
+    padding-left : 5px;
+    padding-right : 5px;
+    padding-top : 7px;
+    padding-bottom : 3px;
+    margin : 0;
+    width : auto;
+    height: 19px;
+    float : left;
+    display : block;
+    text-decoration : none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-right: solid 1px #0a7285;
+    border-top: solid 1px #0a7285;
+    border-left: solid 1px #0a7285;
+    margin-left: 2px; 
+}
+
+.iceMnuBarSubMenu {
+    position : absolute;
+    background: #f7fbfc; /* Old browsers */
+    background: -moz-linear-gradient(top, #f7fbfc 0%, #d9edf2 60%, #add9e4 100%); /* FF3.6+ */
+    width : auto;
+    border-left : solid 1px #0a7285;
+    border-bottom : solid 1px #0a7285;
+    border-right : solid 1px #0a7285;
+    height : auto;
+    display : block;
+    z-index : 999;
+    margin-top: 8px;
+    padding-right: 1px;
+    text-align: justify;
+}
+
+/*
+    Data Table Component classes
+*/
+
+/* was iceDataTblOutline */
+.iceDatTbl { 
+    background-color: #FFFFFF;
+    border-top: 1px solid #0a7285;
+    border-left: 1px solid #0a7285;
+    width: 100%;
+}
+
+/*renglones mas chicos*/
+.iceDatTbl table{
+    border-collapse:collapse;
+}
+
+/* esto es columna encabezado*/
+.iceDatTblColHdr , .iceDatTblColHdr1, .iceDatTblColHdr2, .iceDatTblColGrpHdrCol, .iceDatTblFtr{
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    background: #4A90BA;
+    text-align: center;
+    color: #171E28;
+    border-right: 1px solid #0a7285;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #0a7285;
+}
+
+/* data tables are rendered with alternating row colors */
+.iceDatTblRow1 { /* was iceTblRow1 */
+    background-color: #FFFFFF;
+}
+
+.iceDatTblRow2 { /* was iceTblRow2 */
+    background-color:#FEEAD1;
+}
+
+/* set the common attributes for the column classes */
+.iceDatTblCol, .iceDatTblCol1, .iceDatTblCol2{
+    /*was column, column1, column2, column3*/
+    font-family: 'Sniglet';
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-right: 1px solid #0a7285;
+    border-bottom: 1px solid #0a7285;
+    text-align:left;
+    color: black;
+}
+
+/* set the common attributes for the pagination numbers */
+.iceDatPgrScrCol a, .iceDatPgrCol a {
+    font-family:'Sniglet';
+    font-size: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    background-color: transparent;
+    color: #555753;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #0a7285;
+}
+
+/* override the attributes for the currently selected page */
+.iceDatPgrScrCol a {
+    color: #FFFFFF;
+    border: 1px solid #0a7285;
+    background-color: #0a7285;
+}
+
+/* set the attributes for the mouseover on none-current pages */
+.iceDatPgrCol a:hover {
+    color: #555753;
+    border: 1px solid #0a7285;
+    background-color: #e5ecd0;
+}
+
+/*
+----------- Panel Collapsible --------
+*/
+
+.icePnlClpsbl, .icePnlClpsbl-dis {
+    border: solid 1px #0a7285;   
+    margin-top:10px;
+}
+
+.icePnlClpsblCnt .icePnlClpsbl {
+    border: none;
+}
+
+/**este es titulo al hacer click*/
+.icePnlClpsblHdr, .icePnlClpsblHdr-dis {
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    background: #4A90BA;
+    color:#171E28;
+    font-weight: bolder;
+    background: #4A90BA;
+    border-bottom: solid 1px #0a7285;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;  
+}
+
+/*Este modificar para el cuerpo del panel collapsible*/
+.icePnlClpsblCnt, .icePnlClpsblCnt-dis {
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: #555753;
+    background-color:#FEEAD1;
+    padding: 4px 4px 4px 4px;
+    border-bottom: none;
+}
+
+/*este es titulo vista primera*/
+.icePnlClpsblColpsdHdr, .icePnlClpsblColpsdHdr-dis {
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    background: #4A90BA;
+    color:#171E28;
+    font-weight: bolder;
+    border-right: solid 1px #0a7285;
+    border-top: solid 1px #0a7285;
+    border-bottom: solid 1px #0a7285;
+    border-left: solid 1px #0a7285;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+    margin-top: 10px;
+}
+/*--------------------------------------------*/
+
+
+
+.panelTabla{
+    margin-top : 10px;  
+    height : 50%;   
+    width:100%;
+}
+
+.panelOpciones {   
+    margin-top: 10px;  
+    text-align: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+hr {
+    background-color: #cccccc;
+    height: 1px;
+    width: 100%;
+    border: 0;
+}
+
+/*
+----------- PanelConfirmation ----------
+*/
+.icePnlCnf {
+    border-top: solid 1px #0a7285;
+    border-right: solid 1px #0a7285;
+    border-left: solid 1px #0a7285;
+    border-bottom: solid 1px #0a7285;
+    padding: 0;
+    width: 300px;
+    z-index: 1000;
+    color: red;
+    font-family: 'Sniglet';
+    font-size: 10px;
+}
+
+/*titulo del panel*/
+.icePnlCnfHdr {
+    height: auto;
+    font-weight: bold;
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: #171E28;
+    background: #4A90BA;
+    border-bottom: solid 1px #0a7285;
+}
+/*----------------------------------------------*/
+
+.icePnlCnfBody {
+    padding: 10px 10px 5px 10px;
+    background: #FEEAD1;
+    font-size: 1.1vw;
+    font-weight: normal;
+    font-family: 'Sniglet';    
+}
+
+.icePnlCnfBtns {
+    padding: 5px 10px 10px 10px;
+    background: #FEEAD1;
+    text-align: center;
+    font-size: 1.1vw;
+    font-weight: normal;
+    font-family: 'Sniglet';
+}
+
+.iceSelInpDate {
+    font-family : 'Sniglet', Helvetica, sans-serif;
+    font-size : 0.95em;
+    background-color : #ffffff;
+    border : 1px solid #0a7285;
+}
+.iceSelInpDateIFrameFix, .iceIEIFrameFix {
+    z-index : -1;
+    position : absolute;
+    display : block;
+}
+.iceSelInpDatePopup {
+    min-width : 172px;
+}
+
+.iceSelInpDateInput {
+    width : 105px;
+    /* margin : 2px;*/
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: #171E28;
+}
+.iceSelInpDateOpenPopup {
+    display : inline;
+    text-decoration : none;
+    background-color : transparent;
+    background-image : url(../images/calendar.png);
+    background-repeat : no-repeat;
+    text-align : center;
+    border : none;
+    width : 16px;
+    height : 16px;
+}
+.iceSelInpDateClosePopup {
+    display : inline;
+    text-decoration : none;
+    background-color : transparent;
+    background-image : url(../images/calendar.png);
+    background-repeat : no-repeat;
+    text-align : center;
+    border : none;
+    width : 16px;
+    height : 16px;
+}
+.iceSelInpDateMonthYear, .iceSelInpDateTime {
+    font-family :  'Sniglet';
+    font-size : 0.95em;
+    background-color : #efefef;
+    text-align : center;
+    color : #000000;
+    padding-left : 1px;
+    padding-right : 1px;
+    padding-top : 4px;
+    padding-bottom : 4px;
+}
+.iceSelInpDateTime {
+    border-left : 1px solid #0a7285;
+    border-bottom : 1px solid #0a7285;
+    border-right : 1px solid #0a7285;
+}
+.iceSelInpDateMoYrDropdown, .iceSelInpDateTimeDropDown {
+    background-color : #efefef;
+    font-weight : bold;
+    color : #000000;
+}
+.iceSelInpDateMonthYear img {
+    border : none;
+}
+.iceSelInpDateMovePrev {
+    text-decoration : none;
+    display : inline;
+    background-color : transparent;
+    background-image : url(../images/arrow-previous.gif);
+    background-repeat : no-repeat;
+    text-align : center;
+    border : none;
+    width : 17px;
+    height : 16px;
+}
+.iceSelInpDateMoveNext {
+    text-decoration : none;
+    display : inline;
+    background-color : transparent;
+    background-image : url(../images/arrow-next.gif);
+    background-repeat : no-repeat;
+    text-align : center;
+    border : none;
+    width : 17px;
+    height : 16px;
+}
+.iceSelInpDateWeek {
+    font-weight : normal;
+    color : #1c3c54;
+    text-align : center;
+    padding-left : 5px;
+    padding-right : 5px;
+    border-bottom : 1px solid #0a7285;
+}
+.iceSelInpDateDay, .iceSelInpDateCur {
+    padding : 3px;
+    text-align : center;
+}
+.iceSelInpDateCur .iceOutTxt {
+    color : #ffffff;
+}
+.iceSelInpDateDay a {
+    text-decoration : none;
+    background-color : #ffffff;
+    border : 1px solid #0a7285;
+    color : #000000;
+    width : 100%;
+    height : 100%;
+    padding : 0;
+    display : block;
+}
+.iceSelInpDateDay .iceOutTxt {
+    color : #000000;
+}
+.iceSelInpDateCur a {
+    text-decoration : none;
+    background-color : #a49881;
+    border : 1px solid #0a7285;
+    color : #ffffff;
+    width : 100%;
+    height : 100%;
+    padding : 0;
+    display : block;
+}
+.iceSelInpDateDay a:hover {
+    text-decoration : none;
+    color : #1c3c54;
+}
+
+
+/**********************************/
+
+.titulo{
+    font-family: 'Sniglet';
+    font-size: 18px;
+    color: #E87A15;
+    font-weight: bold;
+    margin-left: 0.5%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.tituloCaratula{
+    font-family: 'Sniglet';
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.tituloPanel{
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    background: #4A90BA;
+    color:#0a7285;
+    border-right: solid 1px #0a7285;
+    border-top: solid 1px #0a7285;   
+    border-left: solid 1px #0a7285;
+    border-bottom: solid 1px #0a7285;   
+    height:20px;
+    padding:5px;  
+    margin-top: 5px;
+}
+
+.cuerpoPanel{
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: #555753;
+    background-color:#FEEAD1;
+    padding: 4px 4px 4px 4px; 
+    border-right: solid 1px #0a7285;
+    border-bottom: solid 1px #0a7285;   
+    border-left: solid 1px #0a7285;
+}
+
+/*--------------- autoComplete classes ------*/
+
+.iceSelInpTxtTxt {
+    font-family:  'Sniglet';
+    font-size: 1.1vw;
+    border: 1px solid #0a7285;
+    background-color: #FFFFFF;
+    /* margin: 10px 0 0 2px;*/
+    padding: 2px;  
+}
+
+.iceSelInpTxtList {
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    position: absolute;
+    display: block;
+    border-top: 1px solid #0a7285;
+    border-right: 1px solid #0a7285;
+    border-left: 1px solid #0a7285;
+    border-bottom: 1px solid #0a7285;
+}
+
+.iceSelInpTxtRow {
+    font-family:  'Sniglet';
+    font-size: 1.1vw;
+    display: block;
+    background-color: #FFFFFF;
+    color: #333333;
+    padding: 2px;
+    padding-left: 10px;
+    border-bottom: 1px solid #0a7285;
+    position: relative;
+}
+
+.iceSelInpTxtSelRow {
+    display: block;
+    background-color: #8dbadd;
+    color: #FFFFFF;
+    padding: 2px;
+    padding-left: 10px;
+    border-bottom: 1px solid #0a7285;
+    position: relative;
+    font-family:  'Sniglet';
+    font-size: 1.1vw;  
+}
+
+.iceSelInpTxtSelRow span {
+    color: #FFFFFF;
+}
+
+/*--------------- autoComplete disable class ------*/
+
+.iceSelInpTxtTxt-dis {
+    font-family: 'Sniglet';
+    font-size: 1.1vw;
+    color: #ABABAB;
+    border: 1px dotted #0a7285;
+    cursor: default;
+}
+
+.iceOutProg {
+    margin: 0;
+}
+.iceOutProgBg {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #0a7285;
+    height: 17px;
+    width: 300px;
+}
+.iceOutProgFill {
+    background: url("../images/ProgFill_bg.gif") repeat-x scroll left top transparent;
+    display: block;
+    height: 17px;
+    margin: 1px;
+}
+.iceOutProgTxt {
+    color: #484848;
+}
+
+/*-- ----------- PanelPopup & panelTooltip ---------- */
+
+.icePnlPop, .icePnlTlTip {
+    padding: 0px;
+    z-index: 1000;
+    background: #F5F5F5;
+    border: 1px solid #d9d9d9;
+    color: #666666;
+}
+
+.icePnlPopHdr, .icePnlTlTipHdr {
+    background: url("../xmlhttp/css/rime/css-images/PnlHdr_bgslice.gif") repeat-x scroll left top #fff;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
+    height: 2em;
+}
+
+.icePnlPopHdr .iceOutTxt, .icePnlTlTipHdr .iceOutTxt {
+    padding: 4px;
+    text-align: center;
+    vertical-align: middle;
+    font: 11px tahoma;
+    color: #484848;
+    font-weight: bold;
+}
+
+.icePnlPopBody, .icePnlTlTipBody {
+    padding: 10px;
+}
+
+.icePnlPopFtr, .icePnlTlTipFtr {
+    float: right;
+    height: auto;
+    background-color: #DDDDDD;
+}
+
+.popupTopTextDrag, .popupTopTextModal {
+    margin: 2px 0 0 4px;
+    display: inline;
+    float: left;
+}
+
+.popupTopClose, .popupTopCloseModal {
+    vertical-align: middle;
+    margin: 4px;
+    display: inline;
+    float: right;
+}
+
+.popupContentText {
+    display: block;
+}
+
+/*-------------------------------------------------------------------*/
+/*.banner{
+    background: transparent;
+    text-align: right;
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.login{
+    text-align : justify;
+    background: white;
+    border: solid 1px #0a7285;
+}
+
+.gris{
+    margin-left: 10px;
+    color:#7F7F84;    
+}
+
+.caja{
+    border: 3px solid rgba(153, 153, 153, 0.75);    
+    width: 320px;
+    height: 350px;
+    margin-left:420px;
+    padding-top:50px;
+    border-radius:15px 15px 15px 15px;
+}
+
+.button2{
+    cursor: pointer;
+    background-color: #E5E6E1;    
+    border: 1px solid #BDBDBD;
+    color: #000000;
+    font-family:'Sniglet';
+        font-size: 1.1vw;
+    font-weight: bold;
+    line-height: 100%;
+    padding: 3px 8px;
+    text-decoration: none;   
+    border-radius: 5px 5px 5px 5px;
+}
+
+.table {
+    font-family : "Trebuchet MS", Arial, sans-serif;
+    font-size : 11px;
+}
+
+.conf {
+    background-color : #ffffcc;
+    font-family : "Trebuchet MS", Arial, sans-serif;
+    font-size : 12px;
+    margin-top : 25px;
+    margin-bottom : 5px;
+    margin-left : 40px;
+    margin-right : 40px;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    padding-left : 10px;
+    padding-right : 10px;
+}
+
+.panelFind {
+    top : 32px;
+    position : relative;
+    margin-left : -32px;
+    margin-top : -48px;
+    margin-bottom : 18px;
+}
+
+Estilos Icefaces 
+
+PANELPOPUP.JSPX 
+
+.corePopup {
+    position: absolute;
+    z-index: 1001;
+    width: 300px;
+    height: 150px;
+    top: 60%;
+    left: 40%;
+}
+
+.corePopup table {
+    width: 100%;
+}
+
+.popupBody {
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.popupHeaderWrapper {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.popupHeaderText {
+    float: left;
+}
+
+.popupHeaderImage {
+    float: right;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+----------- PanelPopup & panelTooltip ----------
+
+.icePnlPop, .icePnlTlTip {
+    padding: 0px;
+    z-index: 1000;
+    background: #F5F5F5;
+    border: 1px solid #d9d9d9;
+    color: #666666;
+}
+
+.icePnlPopHdr, .icePnlTlTipHdr {
+    height: 2.0em;
+    font-weight: bold;
+    background: #FFF url( './css-images/PnlHdr_bgslice.gif' ) repeat-x top left;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.icePnlPopHdr .iceOutTxt, .icePnlTlTipHdr .iceOutTxt {
+    padding: 4px;
+    text-align: center;
+    vertical-align: middle;
+    font: 11px tahoma;
+    color: #484848;
+    font-weight: bold;
+}
+
+.icePnlPopBody, .icePnlTlTipBody {
+    padding: 10px;
+}
+
+.icePnlPopFtr, .icePnlTlTipFtr {
+    float: right;
+    height: auto;
+    background-color: #DDDDDD;
+}
+
+.popupTopTextDrag, .popupTopTextModal {
+    margin: 2px 0 0 4px;
+    display: inline;
+    float: left;
+}
+
+.popupTopClose, .popupTopCloseModal {
+    vertical-align: middle;
+    margin: 4px;
+    display: inline;
+    float: right;
+}
+
+.popupContentText {
+    display: block;
+}
+
+ END PANELPOPUP.JSPX 
+
+
+--------------- autoComplete classes ------
+
+.iceSelInpTxtTxt {
+    font-family:'Sniglet';
+        font-size: 1.1vw;
+    border: 1px solid #ABABAB;
+    background-color: #FFFFFF;
+    margin: 10px 0 0 2px;
+    padding: 2px;  
+}
+
+.iceSelInpTxtList {
+    font-family:'Sniglet';
+     font-size: 1.1vw;
+    position: absolute;
+    display: block;
+    border-top: 1px solid #ABABAB;
+    border-right: 1px solid #666666;
+    border-left: 1px solid #ABABAB;
+    border-bottom: 1px solid #333333;
+}
+
+.iceSelInpTxtRow {
+    font-family:'Sniglet';
+      font-size: 1.1vw;
+    display: block;
+    background-color: #FFFFFF;
+    color: #333333;
+    padding: 2px;
+    padding-left: 10px;
+    border-bottom: 1px solid #DEDEDE;
+    position: relative;
+}
+
+.iceSelInpTxtSelRow {
+    display: block;
+    background-color: #8dbadd;
+    color: #FFFFFF;
+    padding: 2px;
+    padding-left: 10px;
+    border-bottom: 1px solid #FFFFFF;
+    position: relative;
+    font-family:'Sniglet';
+        font-size: 1.1vw;
+}
+
+.iceSelInpTxtSelRow span {
+    color: #FFFFFF;
+}
+
+--------------- autoComplete disable class ------
+
+.iceSelInpTxtTxt-dis {
+   font-family:'Sniglet';
+    font-size: .95em;
+    color: #ABABAB;
+    border: 1px dotted #CCCCCC;
+    cursor: default;
+}
+
+.iceOutProg {
+    margin: 0;
+}
+.iceOutProgBg {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D9D9D9;
+    height: 17px;
+    width: 300px;
+}
+.iceOutProgFill {
+    background: url("../images/ProgFill_bg.gif") repeat-x scroll left top transparent;
+    display: block;
+    height: 17px;
+    margin: 1px;
+}
+.iceOutProgTxt {
+    color: #484848;
+}*/
